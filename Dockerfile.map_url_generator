@@ -1,0 +1,9 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY map_url_generator.py requirements_1.txt ./
+
+RUN pip install --no-cache-dir -r requirements_1.txt
+
+CMD ["python", "map_url_generator.py"]

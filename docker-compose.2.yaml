@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  download_map_images:
+    container_name: map_urdownload_map_imagesl_generator
+    build:
+      context: .
+      dockerfile: Dockerfile.download_map_images
+    volumes:
+      - ./data:/data
+      - ./config:/app/config

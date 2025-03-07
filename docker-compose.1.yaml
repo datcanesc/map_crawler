@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  map_url_generator:
+    container_name: map_url_generator
+    build:
+      context: .
+      dockerfile: Dockerfile.map_url_generator
+    volumes:
+      - ./data:/data
+      - ./config:/app/config
