@@ -70,7 +70,7 @@ def main():
         print(f"Hata: YAML dosyasında eksik anahtar: {e}")
         return
     
-    zoom_levels = range(9, 13)
+    zoom_levels = range(0, 22)
     tile_data, count = generate_tile_urls(top_left, bottom_right, map_type, zoom_levels)
 
     save_to_json(tile_data, '/data/urls.json')
